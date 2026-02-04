@@ -1,0 +1,33 @@
+
+# for the demo these are unused but keeping here for completeness
+name: 'demo'
+data_dir: ''
+out_dir: ''
+dataloader: ''
+log: True
+init_from: ''
+
+
+
+model:
+  device: "cpu"
+  vocab_size: 2
+  block_size: 50
+  n_heads: 2
+  n_layer: 2
+  n_embd: 24
+  dropout: 0
+  bias: 0
+  total_batch_size: 450
+  batch_size: 9
+  max_iters: 20000
+  lr_decay_iters: 9950
+  warmup_iters: 50
+  eval_iters: 100
+  eval_interval: 100
+  clip_grad: True
+  learning_rate: 0.0001
+  beta1: 0.9
+  beta2: 0.95
+  weight_decay: 0.05
+  eps: 1e-8

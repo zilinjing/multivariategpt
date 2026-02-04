@@ -1,0 +1,15 @@
+[project]
+name = "multivariategpt"
+version = "0.1.0"
+description = "A transformer architecture for mixed categorical and numeric data"
+requires-python = ">=3.9"
+dependencies = [
+    "torch",
+    "pyyaml",
+    "numpy",
+    "matplotlib",
+]
+
+
+[tool.setuptools.packages.find]
+include = ["multivariategpt*"]
