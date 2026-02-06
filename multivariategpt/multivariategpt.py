@@ -229,6 +229,21 @@ class GPT(nn.Module):
             torch.nn.init.normal_(module.weight, mean=0.0, std=0.02)
 
     def forward(self,c,v,t_c=None,t_v=None):
+        '''
+        compute forward pass and return loss
+        input:
+            c: B,T class ids (uint)
+            v: B,T values (float), nan if no value for that position
+            t_c: B,T target class ids (uint)
+            t_v: B,T target values (float), nan if no value for that position
+        return:
+            x_c: B,T,C class logits
+            x_v_l: B,T,C value locs
+            x_v_s: B,T,C value scales
+            c_loss: scalar class loss
+            v_loss: scalar value loss
+            loss: scalar total loss
+        '''
         # input: B,T
         # output: B,T,C x 2 -> loss function -> scalar loss
         device = c.device

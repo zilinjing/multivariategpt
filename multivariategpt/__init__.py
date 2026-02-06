@@ -10,7 +10,6 @@ from .multivariategpt import (
     CausalSelfAttention,
     Block,
     gaussian_loss,
-    negative_binomial_loss,
 )
 
 from .dataloader import (
