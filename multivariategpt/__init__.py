@@ -12,6 +12,15 @@ from .multivariategpt import (
     gaussian_loss,
 )
 
+
+from .multivariategpt_v2 import (
+    GPTConfig as GPTConfigV2,
+    GPT as GPTV2,
+    gaussian_loss as gaussian_loss_v2,
+    gaussian_loss_efficient,
+)
+
+
 from .dataloader import (
     DataLoader,
     DataLoaderDDP,
